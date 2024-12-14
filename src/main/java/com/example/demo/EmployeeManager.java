@@ -1,21 +1,14 @@
-
 package com.example.demo;
 
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public class EmployeeManager {
 
-    private static final Employees list
-            = new Employees();
-
-
+    private static final Employees list = new Employees();
 
     // Method to return the list
-    public Employees getAllEmployees()
-    {
+    public Employees getAllEmployees() {
 
         return list;
     }
@@ -38,15 +31,9 @@ public class EmployeeManager {
 
         list.getEmployeeList().removeIf(currentEmployee -> currentEmployee.getEmployee_id().equals(id));
 
-
     }
 
-
-
-
-    public void
-    addEmployee(Employee employee)
-    {
+    public void addEmployee(Employee employee) {
         list.getEmployeeList()
                 .add(employee);
 
